@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+html
+{
+	background: url("../images/fundo_login6.jpeg") no-repeat center;
+	background-size: 100%;
+	text-align: center;
+	position: relative;
+}
+
+form
+{
+	width: 400px;
+	background-color: rgba(255, 255, 255, 0.9);
+	margin: 0 auto;
+	margin-top: 40px;
+	padding: 25px;
+}
+
+.botao
+{
+	width: 350px;
+	height: 60px;
+	border-radius: 3px;
+	border-color: rgba(240,128,128,0.7);
+	float: bottom;
+	background-color: rgb(240,128,128);
+	/*background-color: #F57D68;
+	background-color: rgb(246,140,128);*/
+	color: white;
+	font-size: 18px;
+	font-style: bold;
+	font-family: 'Acme', sans-serif;
+}
+
+.botao:hover
+{
+	background-color: rgba(240,128,128, 0.90);
+}
+
+.p
+{
+	border: 1px solid rgba(28, 28, 28, 0.4);
+	height: 40px;
+	width: 350px;
+	height: 50px;
+	margin-left: 24px;
+}
+
+.input
+{	
+	position: relative;
+	width: 294px;
+	height: 48px;
+	font-family: 'Acme', sans-serif;
+	float: right;
+	border: 0px;
+	padding-left: 5px;
+}
+
+img 
+{
+	border-right: 1px solid rgba(28, 28, 28, 0.4);
+	border-radius: 1px;
+	padding: 5px;
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+
+h1
+{
+	font-size: 40px;
+	font-family: 'Pacifico', cursive;
+	color: #FF5252;
+}
+
+.err
+{
+	font-family: 'Acme', sans-serif;
+	color: rgb(240,128,128);
+}

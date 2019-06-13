@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Akronim|Amatic+SC|Cinzel|Dancing+Script|Satisfy|Shadows+Into+Light&display=swap');
+
+body 
+{
+	margin: 0;
+}
+
+/*Cabecalho e rodapé*/
+
+html
+{
+	background: url("../images/fundo_login6.jpeg");
+	background-size: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+header 
+{
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.6);
+	margin-bottom: 20px;
+}
+
+.title
+{
+	height: 100px;
+	font-size: 65px;
+	font-family: 'Pacifico', cursive;
+	/*font-family: 'Satisfy', cursive;*/
+	color: #FF5252;
+	text-align: left;
+	/*background-image: url('../images/logo.png');
+	background-repeat: no-repeat;*/
+	background-color: rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid lightgray;
+}
+
+.menu
+{
+	height: 40px;
+	font-size: 18px;
+	text-align: right;
+	float: right;
+	margin-top: 40px;
+	margin-right: 15px; 
+}
+
+li {
+	float: left;
+	margin-left: 50px;
+}
+
+.botaomenu:hover
+{
+	text-decoration: underline;
+}
+
+.botaomenu
+{
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	/*color: rgb(240,128,128);*/
+	color: #F57D68;
+	padding-left: 10px;
+}
+
+.imgFooter 
+{
+	width: 15px; 
+	height: 15px;
+}
+
+.footer 
+{
+	padding: 0px;
+	font-size: 10px;
+	text-align: center; 
+	height: 70px;
+	margin: 0 auto;
+	float: bottom;
+	color: black;
+	position: relative;
+}
+
+
+/* Hiperlinks */
+
+a {
+	text-decoration: none;
+}
+
+a div img
+{
+	float: left; 
+	width: 35px; 
+	height: 35px;
+}
+
+/* Formulario Nova Tarefa */
+
+.formulario
+{
+	height: 400px;
+	margin: 0 auto;
+}
+
+form 
+{
+	margin-left: 450px;
+	height: 350px;
+	width: 400px; 
+	padding: 15px;
+	float: center;
+	/*background-color: rgba(255, 255, 255, 0.95);*/
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	color: rgba(28, 28, 28, 0.8);
+}
+
+.inputtxt
+{
+	width: 222px;
+	padding: 5px;
+	margin: 5px;
+	float: left;
+}
+
+.inputtime
+{
+	margin: 5px;
+	padding: 2px;
+}
+
+.inputbutton
+{
+	min-width: 80px;
+	height: 30px;
+	border-radius: 3px;
+	border-color: rgba(240,128,128,0.7);
+	float: right;
+	background-color: rgb(240,128,128);
+	color: white;
+	font-size: 14px;
+	font-style: bold;
+	font-family: 'Acme', sans-serif;
+	margin-top: 25px;
+	margin-left: 15px;
+}
+
+.select
+{
+	background-color: white;
+	width: 221px;
+	padding: 5px;
+	margin: 5px;
+	font-family: 'Acme', sans-serif;
+}
+
+form label 
+{
+	width: 130px;
+	padding: 2px;
+	margin: 8px 10px;
+	float: left;
+	text-align: right;
+}
+
+div img 
+{
+	width: 152px;
+	height: 450px;
+}
+
+.btn
+{
+	width: 25px;
+	height: 25px;
+}
+
+/* Ajuda */
+
+.texto
+{
+	margin: 0 auto;
+	text-align: center;
+	height: 400px;
+	width: 800px;
+	max-height: 100%;
+	overflow: scroll auto;
+	padding: 5px;
+	font-family: 'Crimson Text', serif;
+}
+
+div h1 
+{
+	color: rgba(255, 82, 82, 0.7);
+}
+
+div h2 
+{
+	color: rgba(255, 82, 82, 0.5);
+}
+
+div p 
+{
+	text-align: justify;
+}
+
+.prints
+{
+	width: 700px;
+	height: 450px;
+}
+
+/** Tabelas */
+
+.tabela
+{
+	width: 100%;
+	height: 400px;
+	overflow: auto scroll; 
+	float: right;
+	margin: 0 auto;
+}
+
+table
+{
+	width: 450px;
+	float: left;	
+	/*border: 1px solid rgb(255, 255, 255);*/
+	font-family: 'Roboto', sans-serif;
+	/*border-radius: 2px;*/
+}
+
+td, th
+{
+	width: 50px;
+	/*border: 1px solid rgb(255, 255, 255);*/
+	text-align: center;
+	color: white;
+	/*border-radius: 2px;*/
+	padding: 5px;
+	
+}
+
+.feito td
+{
+	background-color: rgba(140, 185, 80, 0.6);
+}
+
+.feito th
+{
+	background-color: rgb(140, 185, 80);
+}
+
+.emAndamento td
+{
+	background-color: rgba(231, 204, 82, 0.623);
+}
+
+.emAndamento th
+{
+	background-color: rgb(231, 204, 82);
+}
+
+.stuck td
+{
+	background-color: rgba(244, 110, 88, 0.6);
+}
+
+.stuck th
+{
+	background-color: rgb(244, 110, 88);
+}
+
+/* settings */
+
+.excluirConta
+{
+	font-size: 12px;
+	color: rgb(255, 82, 82);
+	float: left;
+	margin-top: 40px;
+	display: block;
+}
