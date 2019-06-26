@@ -8,7 +8,7 @@ class Query
 	{
 		try
 		{
-			self::$conn = new PDO('mysql:host=localhost;dbname=mytodo', 'root', '');
+			self::$conn = new PDO('pgsql:host=localhost;dbname=mytodo', 'postgres', '123456');
 			self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 			return self::$conn;

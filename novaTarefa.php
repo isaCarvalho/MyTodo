@@ -45,6 +45,18 @@
 					<input type="date" id="dataid" name="data" class="inputtime" />
 				</p>
 
+				<p id="recorrencia">
+					<label for="repetir">Repetir</label>
+					<select type="text" id="repetirid" name="repetir" class="select" required="true">
+						<option value="1" selected="selected">Nenhuma</option>
+						<option value="2">Diariamente</option>
+						<option value="3">Semanalmente</option>
+						<option value="4">Mensalmente</option>
+						<option value="5">Anualmente</option>
+						<option value="6">Não especificado</option>
+					</select>
+				</p>
+
 				<p>
 					<input type="submit" name="salvar" value="Salvar" class="inputbutton">
 

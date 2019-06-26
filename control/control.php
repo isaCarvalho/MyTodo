@@ -55,4 +55,4 @@ switch ($action)
     
 }
 
-header('Location: '.$header);
+//header('Location: '.$header);
