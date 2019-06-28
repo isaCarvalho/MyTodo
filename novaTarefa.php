@@ -22,15 +22,6 @@
 				</p>
 
 				<p>
-					<label for="estado">Estado</label>
-					<select type="text" id="estadoid" name="estado" class="select" required="true">
-						<option value="1" selected="selected">Feito</option>
-						<option value="2">Em andamento</option>
-						<option value="3">Stuck</option>
-					</select>
-				</p>
-
-				<p>
 					<label for="inicio">Inicio</label>
 					<input type="time" id="incioid" name="inicio" class="inputtime"/>
 				</p>

@@ -29,6 +29,12 @@ switch ($action)
         $header = salvarUsuario();        
         break;
 
+    case 'excluirTarefa':
+        include '../model/excluirTarefa.php';
+
+        $header = excluirTarefa($nomeTarefa);
+        break;
+    
     case 'novaTarefa':
         include '../model/salvarTarefa.php';
 
@@ -55,4 +61,4 @@ switch ($action)
     
 }
 
-//header('Location: '.$header);
+header('Location: '.$header);

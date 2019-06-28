@@ -9,4 +9,6 @@ function excluirTarefa($nomeTarefa)
     $id_usuario = $_SESSION['login'];
 
     Query::delete("tarefas", "id_usuario = ? AND nome = ?", [$id_usuario, $nomeTarefa]);
+
+    return '../home.php';
 }

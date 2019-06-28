@@ -1,3 +1,5 @@
+-- Database: mytodo
+
 -- DROP DATABASE mytodo;
 
 CREATE DATABASE mytodo
@@ -8,10 +10,7 @@ CREATE DATABASE mytodo
     LC_CTYPE = 'pt_BR.UTF-8'
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
-
-COMMENT ON DATABASE mytodo
-    IS 'Base de dados para o gerenciador de tarefas ''MyTodo''';
-
+	
 create table usuarios (
 	id_usuario int primary key,
 	nome varchar(255) not null,
@@ -21,14 +20,6 @@ create table usuarios (
 
 create sequence usuarios_seq increment 1 minvalue 1 start 1;
 alter table usuarios alter column id_usuario set default nextval('usuarios_seq');
-
-create table estados (
-	id_estado int primary key,
-	descricao varchar(255) not null
-);
-
-create sequence estados_seq increment 1 minvalue 1 start 1;
-alter table estados alter column id_estado set default nextval('estados_seq');
 
 create table recorrencia (
 	id_recorrencia int primary key,
@@ -45,7 +36,6 @@ create table tarefas (
 	inicio time,
 	fim time,
 	data date,
-	id_estado int not null references estados(id_estado),
 	id_usuario int not null references usuarios(id_usuario),
 	id_recorrencia int not null references recorrencia(id_recorrencia)
 );
@@ -59,5 +49,3 @@ insert into recorrencia (descricao, intervalo) values
 ('semanal', 7),
 ('mensal', 30),
 ('anual', 356);
-
-insert into estados (descricao) values ('Feito'), ('Em andamento'), ('Stuck');

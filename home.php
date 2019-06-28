@@ -14,11 +14,7 @@
 	<body onload="atualizar()">
 		<div class="tabela"> 
 		
-			<table class="feito"></table>
-
-			<table class="emAndamento"></table>
-
-			<table class="stuck"></table>
+			<table class="feito" id="feito"></table>
 
 		</div>
 	</body>
