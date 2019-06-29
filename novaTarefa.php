@@ -17,27 +17,27 @@
 
 			<form method="post" name="fsalvar" action="control/control.php?action=novaTarefa">
 				<p>
-					<label for="nome">Nome da Tarefa</label>
+					<label for="nome">Nome da Tarefa*</label>
 					<input type="text" id="nomeid" name="nome" class="inputtxt" placeholder="Nome da tarefa" required="true" />
 				</p>
 
 				<p>
-					<label for="inicio">Inicio</label>
+					<label for="inicio">Inicio*</label>
 					<input type="time" id="incioid" name="inicio" class="inputtime"/>
 				</p>
 
 				<p>
-					<label for="fim">Término</label>
+					<label for="fim">Término*</label>
 					<input type="time" id="fimid" name="fim" class="inputtime"/>
 				</p>
 
 				<p>
-					<label for="data">Data</label>
-					<input type="date" id="dataid" name="data" class="inputtime" />
+					<label for="data">Data*</label>
+					<input type="date" id="d*ataid" name="data" class="inputtime" />
 				</p>
 
 				<p id="recorrencia">
-					<label for="repetir">Repetir</label>
+					<label for="repetir">Repetir*</label>
 					<select type="text" id="repetirid" name="repetir" class="select" required="true">
 						<option value="1" selected="selected">Nenhuma</option>
 						<option value="2">Diariamente</option>

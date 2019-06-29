@@ -4,7 +4,6 @@ extract($_GET);
 
 switch ($action)
 {
-
     case 'erroLogin':
         include "../model/erroLogin.php";
 
@@ -59,6 +58,11 @@ switch ($action)
         $header = excluirUsuario();
         break;
     
+    case 'atualizarNomeTarefa':
+        include '../model/atualizarTarefa.php';
+
+        atualizarNomeTarefa($nomeAntigo, $nomeNovo);
+        break;
 }
 
 header('Location: '.$header);
