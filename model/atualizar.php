@@ -14,11 +14,17 @@ function atualizar()
     {
         $tempo = Query::select("recorrencia", "intervalo", "id_recorrencia = ?", [$result['id_recorrencia']]);
 
-        if ($result['data'] == date('Y-m-d'))
+        if (($result['data'] <= date('Y-m-d')) && ($result['fim'] <= date('H:i:s')))
         {
-            Query::update("tarefas", "data", "id_tarefa = ?", [date('Y-m-d', strtotime('+'.$tempo[0]['intervalo'].' days')), $result['id_tarefa']]);
+            if ($tempo[0]['intervalo'] != 0)
+                Query::update("tarefas", "data", "id_tarefa = ?", [date('Y-m-d', strtotime('+'.$tempo[0]['intervalo'].' days')), $result['id_tarefa']]);
+            else
+                Query::update("tarefas", "ativo", "id_tarefa = ?", [0, $result['id_tarefa']]);
+            
         }
     }
+
+    $results = Query::select("tarefas", "*", "id_usuario = ? and ativo = 1", [$id_usuario]);
 
     echo json_encode($results);
 }

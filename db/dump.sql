@@ -49,3 +49,8 @@ insert into recorrencia (descricao, intervalo) values
 ('semanal', 7),
 ('mensal', 30),
 ('anual', 356);
+
+alter table tarefas add column ativo int;
+
+update tarefas set ativo = 0 where data < current_date and fim < current_time;
+update tarefas set ativo = 1 where data >= current_date and fim >= current_time;

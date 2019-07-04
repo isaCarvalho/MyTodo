@@ -237,12 +237,12 @@ td, th
 {
 	width: 50px;
 	text-align: center;
-	color: white;
+	color: black;
 	padding: 5px;
 	
 }
 
-.feito td
+.feitotd
 {
 	/*background-color: rgba(140, 185, 80, 0.6);*/
 	background-color: rgba(189, 191, 181, 0.7);
@@ -252,6 +252,13 @@ td, th
 .feito th
 {
 	background-color: rgb(180, 182, 173);
+}
+
+.andamentotd
+{
+	/*background-color: rgba(140, 185, 80, 0.6);*/
+	background-color: #FAC4B7;
+	height: 40px;
 }
 
 
