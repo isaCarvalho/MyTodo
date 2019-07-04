@@ -14,6 +14,7 @@ if (isset($_SESSION['login']))
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<link rel="icon" type="imagem/png" href="/images/logo.png" />
 		<title>1.MyTodo - Login</title>
 	</head>
 
