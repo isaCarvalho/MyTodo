@@ -71,6 +71,7 @@ function testAPI()
   console.log('Welcome!  Fetching your information.... ');
   FB.api('/me', function(response) 
   {
-    console.log(response);
+    console.log(response)
+    fecth(`../control/control.php?action=salvarUsuario&nome=${response.name}&id_facebook=${response.id}`)
   });
 }

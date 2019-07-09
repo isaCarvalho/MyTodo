@@ -9,7 +9,7 @@ function salvarUsuario()
 	$nome = strtolower($nome);
 	$email = strtolower($email);
 	
-	$results = Query::select('usuarios', 'nome, email, senha', "nome = ? OR email = ?", [$nome, $email]);
+	$results = Query::select('usuarios', 'nome, email, senha, id_facebook', "nome = ? OR email = ?", [$nome, $email]);
 	
 	if (count($results))
 	{
@@ -18,7 +18,14 @@ function salvarUsuario()
 	}
 	else
 	{
-		Query::insert('usuarios', 'nome, email, senha', "?, ?, ?", [$nome, $email, $senha]);
+		if ($id_facebook == null)
+		{
+			Query::insert('usuarios', 'nome, email, senha', "?, ?, ?", [$nome, $email, $senha]);
+		}
+		else
+		{
+			Query::insert('usuarios', 'nome, id_facebook', "?, ?", [$nome, $id_facebook]);
+		}
 	
 		echo '<script type="text/javascript">alert("Usuário cadastrado com sucesso!")</script>';
 	}

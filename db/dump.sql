@@ -14,8 +14,9 @@ CREATE DATABASE mytodo
 create table usuarios (
 	id_usuario int primary key,
 	nome varchar(255) not null,
-	email varchar(255) not null,
-	senha varchar(32) not null
+	email varchar(255),
+	senha varchar(32),
+	id_facebook int
 );
 
 create sequence usuarios_seq increment 1 minvalue 1 start 1;
