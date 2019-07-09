@@ -18,6 +18,12 @@ switch ($action)
         login();
         break;
 
+    case 'facebookLogin':
+        include "../model/facebookLogin.php";
+
+        facebookLogin($nome, $id_facebook);
+        break;
+
     case 'preencherTarefas':
         include "../model/atualizar.php";
 

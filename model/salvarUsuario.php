@@ -18,14 +18,7 @@ function salvarUsuario()
 	}
 	else
 	{
-		if ($id_facebook == null)
-		{
-			Query::insert('usuarios', 'nome, email, senha', "?, ?, ?", [$nome, $email, $senha]);
-		}
-		else
-		{
-			Query::insert('usuarios', 'nome, id_facebook', "?, ?", [$nome, $id_facebook]);
-		}
+		Query::insert('usuarios', 'nome, email, senha', "?, ?, ?", [$nome, $email, $senha]);
 	
 		echo '<script type="text/javascript">alert("Usuário cadastrado com sucesso!")</script>';
 	}
