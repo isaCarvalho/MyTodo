@@ -22,6 +22,7 @@ if (isset($_SESSION['login']))
 
 		<!-- <div id="fb-root"></div> -->
 		<!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.3&appId=1072041326518155&autoLogAppEvents=1"></script> -->
+		<script src="js/facebook.js"></script>
 
 		<div>
 			<form onsubmit="errLogin(event)" id="loginid">
@@ -55,7 +56,7 @@ if (isset($_SESSION['login']))
 					<!-- <div class="fb-login-button" data-width="350" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true" onlogin="checkLoginState()">
 					</div> -->
 
-					<input type="button" name="fb-login" value="Entrar com facebook" class="botao" style="background-color: #365798;border: 1px solid rgba(54, 87, 152, 0.7);" onclick="checkLoginState()">
+					<input type="button" name="fb-login" value="Entrar com facebook" class="botao" style="background-color: #365798;border: 1px solid rgba(54, 87, 152, 0.7);" onlogin="checkLoginState()">
 				</p>
 
 			</form>
@@ -67,6 +68,6 @@ if (isset($_SESSION['login']))
 	</body>
 
 	<script src="js/erros.js"></script>
-	<script src="js/facebook.js"></script>
+	
 
 </html>
