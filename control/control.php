@@ -21,7 +21,7 @@ switch ($action)
     case 'facebookLogin':
         include "../model/facebookLogin.php";
 
-        facebookLogin($nome, $id_facebook);
+        $header = facebookLogin($nome, $id_facebook);
         break;
 
     case 'preencherTarefas':
