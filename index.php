@@ -60,6 +60,10 @@ if (isset($_SESSION['login']))
 
 			</form>
 		</div>
+
+		<div id="status">
+		</div>
+
 	</body>
 
 	<script src="js/erros.js"></script>
