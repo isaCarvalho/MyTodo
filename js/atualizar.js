@@ -16,19 +16,22 @@ function atualizar()
             let count = 0;
             tarefas.forEach(tarefa => {
 
-                var data = new Date()
-                var dia = data.getDate()
-                var mes = data.getMonth() + 1
-                var ano = data.getFullYear()
+                let data = new Date()
+                let dia = data.getDate()
+                let mes = data.getMonth() + 1
+                let ano = data.getFullYear()
 
-                var mesf  = (mes % 10 == mes) ? '0' + mes : mes
-                var diaf  = (dia % 10 == dia) ? '0' + dia : dia
+                let mesf  = (mes % 10 == mes) ? '0' + mes : mes
+                let diaf  = (dia % 10 == dia) ? '0' + dia : dia
 
-                var str_data = ano + '-' + mesf + '-' + diaf
+                let str_data = ano + '-' + mesf + '-' + diaf
+                let str_hora = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
 
-                var str_hora = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+                let classe = 'feito'
 
-                var classe = 'feito'
+                tarefa.fim = tarefa.fim.toString().substr(-10, 5)
+                tarefa.inicio = tarefa.inicio.toString().substr(-10, 5)
+                str_hora = str_hora.substr(-10, 5)
 
                 if (tarefa.data == str_data)
                 {
@@ -37,7 +40,7 @@ function atualizar()
                     if (tarefa.inicio == str_hora)
                     {
                         var audio = new Audio('../audios/Clock-alarm-electronic-beep.mp3')
-
+                        
                         window.setTimeout(() => {
                             audio.play()
                         }, 1000);
@@ -78,4 +81,4 @@ function atualizar()
         })
 }
 
-window.setInterval(atualizar, 10000);
+window.setInterval(atualizar, 5000);
