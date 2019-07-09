@@ -19,6 +19,10 @@ if (isset($_SESSION['login']))
 	</head>
 
 	<body class="alinhamento">
+
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.3&appId=1072041326518155&autoLogAppEvents=1"></script>
+
 		<div>
 			<form onsubmit="errLogin(event)" id="loginid">
 				<h1>1.MyTodo</h1>
@@ -47,10 +51,16 @@ if (isset($_SESSION['login']))
 					<a href="criarConta.php"><input type="button" name="cadastrar" value="CRIAR CONTA" class="botao"></a>
 				</p>
 
+				<p>
+				<div class="fb-login-button" data-width="350" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true" onlogin="checkLoginState()">
+				</div>
+				</p>
+
 			</form>
 		</div>
 	</body>
 
 	<script src="js/erros.js"></script>
+	<script src="js/facebook.js"></script>
 
 </html>
