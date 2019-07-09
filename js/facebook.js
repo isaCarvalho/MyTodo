@@ -72,6 +72,6 @@ function testAPI()
   FB.api('/me', function(response) 
   {
     console.log(response)
-    fecth(`../control/control.php?action=salvarUsuario&nome=${response.name}&id_facebook=${response.id}`)
+    fecth(`../control/control.php?action=criarConta&nome=${response.name}&id_facebook=${response.id}`)
   });
 }
