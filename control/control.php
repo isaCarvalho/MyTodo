@@ -6,6 +6,12 @@ extract($_GET);
 
 switch ($action)
 {
+    case 'api':
+        include "../api/index.php";
+
+        api($tarefas);
+        break;
+
     case 'erroLogin':
         include "../model/erroLogin.php";
 

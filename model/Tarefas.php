@@ -8,7 +8,7 @@ class Tarefas
     {
         $q = new Query();
 
-        return $q->select("tarefas", "*", "1");
+        return $q->select("tarefas", "*", "true");
     }
 
     public static function getAllByName(string $nome):array
