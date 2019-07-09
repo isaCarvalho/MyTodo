@@ -15,3 +15,4 @@ function facebookLogin($nome, $id_facebook)
     {
         Query::insert("usuarios", "nome, id_facebook", "'?', '?'", [$nome, $id_facebook]);
     }
+}
