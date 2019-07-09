@@ -73,5 +73,7 @@ function testAPI()
   {
     console.log(response)
     fetch(`../control/control.php?action=facebookLogin&nome=${response.name}&id_facebook=${response.id}`)
+      .then(alert("Usuario logado com sucesso!"))
+      .then(response => window.location = '/home.php')
   });
 }

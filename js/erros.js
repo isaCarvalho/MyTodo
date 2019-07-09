@@ -12,6 +12,7 @@ function errLogin(event)
 		}).catch(() =>
 		{
 			fetch('../control/control.php?action=login', {method: 'post', body})
+				.then(alert("Usuario logado com sucesso!"))
 				.then(response => window.location = '/home.php');
 		});
 }
