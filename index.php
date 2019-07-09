@@ -56,7 +56,10 @@ if (isset($_SESSION['login']))
 					<!-- <div class="fb-login-button" data-width="350" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true" onlogin="checkLoginState()">
 					</div> -->
 
-					<input type="button" name="fb-login" value="Entrar com facebook" class="botao" style="background-color: #365798;border: 1px solid rgba(54, 87, 152, 0.7);" onlogin="checkLoginState()">
+					<!-- <input type="button" name="fb-login" value="Entrar com facebook" class="botao" style="background-color: #365798;border: 1px solid rgba(54, 87, 152, 0.7);" onlogin="checkLoginState()"> -->
+
+					<fb:login-button scope="public_profile, email" onlogin="checkLoginState()";>
+					</fb:login-button>
 				</p>
 
 			</form>
