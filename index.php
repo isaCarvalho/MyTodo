@@ -65,8 +65,8 @@ if (isset($_SESSION['login']))
 			</form>
 		</div>
 
-		<div id="status">
-		</div>
+		<!-- <div id="status">
+		</div> -->
 
 	</body>
 
