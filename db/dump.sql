@@ -2,6 +2,8 @@
 
 -- DROP DATABASE mytodo;
 
+-- heroku pg:psql postgresql-adjacent-20728 --app mytod0
+
 CREATE DATABASE mytodo
     WITH 
     OWNER = postgres
@@ -16,7 +18,7 @@ create table usuarios (
 	nome varchar(255) not null,
 	email varchar(255),
 	senha varchar(32),
-	id_facebook int
+	id_facebook varchar(255)
 );
 
 create sequence usuarios_seq increment 1 minvalue 1 start 1;

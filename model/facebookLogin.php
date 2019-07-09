@@ -1,8 +1,10 @@
 <?php
 
+require_once "Query.php";
+
 function facebookLogin($nome, $id_facebook)
 {
-    $results = Query::select("usuarios", "*", "nome = ? and id_facebook = ?", [$nome, $id_facebook]);
+    $results = Query::select("usuarios", "*", "nome = '?' and id_facebook = '?'", [$nome, $id_facebook]);
 
     if (count($results))
     {
@@ -11,7 +13,5 @@ function facebookLogin($nome, $id_facebook)
     }
     else
     {
-        Query::insert("usuarios", "nome, id_facebook", "(?, ?)", [$nome, $id_facebook]);
+        Query::insert("usuarios", "nome, id_facebook", "'?', '?'", [$nome, $id_facebook]);
     }
-}
-

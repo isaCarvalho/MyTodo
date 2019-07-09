@@ -21,37 +21,45 @@ class Query
 
 	public static function executeQuery($query, $array = [])
 	{
-
-		$stmt = self::conn()->prepare($query);
-		$stmt->execute($array);
-
+		try
+		{
+			$stmt = self::conn()->prepare($query);
+			$stmt->execute($array);
+		}
+		catch (PDOException $err)
+		{
+			echo $err->getMessage();
+		}
 	}
 
 	public static function select($table, $values, $condition, $array = [])
 	{
-		$query = "SELECT $values FROM $table WHERE $condition";
+		try
+		{
+			$stmt = self::conn()->prepare("SELECT $values FROM $table WHERE $condition");
+			$stmt->execute($array);
 
-		$stmt = self::conn()->prepare($query);
-		$stmt->execute($array);
-
-		return $stmt->fetchAll(PDO::FETCH_ASSOC); 
+			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
+		} 
+		catch (PDOException $err)
+		{
+			echo $err->getMessage();
+		}
+		return null;
 	}
 
 	public static function insert($table, $fields, $values, $array = [])
 	{
-		$query = "INSERT INTO $table ($fields) VALUES ($values)";
-		self::executeQuery($query, $array);
+		self::executeQuery("INSERT INTO $table ($fields) VALUES ($values)", $array);
 	}
 
 	public static function update($table, $value, $condition, $array = [])
 	{
-		$query = "UPDATE $table SET $value = ? WHERE $condition";
-		self::executeQuery($query, $array);
+		self::executeQuery("UPDATE $table SET $value = ? WHERE $condition", $array);
 	}
 
 	public static function delete($table, $condition, $array = [])
 	{
-		$query = "DELETE FROM $table WHERE $condition";
-		self::executeQuery($query, $array);
+		self::executeQuery("DELETE FROM $table WHERE $condition", $array);
 	}
 }
