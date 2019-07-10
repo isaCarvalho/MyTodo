@@ -17,7 +17,12 @@ function atualizar()
         if (($result['data'] <= date('Y-m-d')) && ($result['fim'] <= date('H:i:s')))
         {
             if ($tempo[0]['intervalo'] != 0)
-                Query::update("tarefas", "data", "id_tarefa = ?", [date('Y-m-d', strtotime('+'.$tempo[0]['intervalo'].' days')), $result['id_tarefa']]);
+            {
+                $data = new Date($result['data']);
+                $novaData = $data->add($tempo[0]['intervalo'], $data);
+
+                Query::update("tarefas", "data", "id_tarefa = ?", [$novaData->format('Y-m-d'), $result['id_tarefa']]);   
+            }
             else
                 Query::update("tarefas", "ativo", "id_tarefa = ?", [0, $result['id_tarefa']]);
             
