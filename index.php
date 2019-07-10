@@ -51,7 +51,7 @@ if (isset($_SESSION['login']))
 				</p>
 
 				<p>
-					<fb:login-button scope="public_profile,email" onlogin="checkLoginState()"; style="width:350px;height:60px;font-size: 18px;font-style: bold;font-family: 'Acme', sans-serif;">
+					<fb:login-button scope="public_profile,email" onclick="checkLoginState()"; style="width:350px;height:60px;font-size: 18px;font-style: bold;font-family: 'Acme', sans-serif;">
 					</fb:login-button>
 				</p>
 
