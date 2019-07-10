@@ -59,7 +59,6 @@ if (isset($_SESSION['login']))
 		</div>
 	</body>
 
-	<script src="js/erros.js"></script>
-	
+	<script src="js/erros.js"></script>	
 
 </html>

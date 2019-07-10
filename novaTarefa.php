@@ -15,7 +15,7 @@
 	<body>
 		<div class="formulario">
 
-			<form method="post" name="fsalvar" action="control/control.php?action=novaTarefa">
+			<form method="post" id="formulario" name="fsalvar" action="control/control.php?action=novaTarefa">
 				<p>
 					<label for="nome">Nome da Tarefa*</label>
 					<input type="text" id="nomeid" name="nome" class="inputtxt" placeholder="Nome da tarefa" required="true" />
@@ -51,13 +51,15 @@
 				<p>
 					<input type="submit" name="salvar" value="Salvar" class="inputbutton">
 
-					<input type="button" name="limpar" onclick="" value="Limpar" class="inputbutton">
+					<input type="button" name="limpar" onclick="limparCampos()" value="Limpar" class="inputbutton">
 				</p>
 			</form>
 
 		</div>
 
 	</body>
+
+	<script src="js/limparForm.js"></script>
 
 </html>
 
