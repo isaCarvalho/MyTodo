@@ -28,12 +28,11 @@ header
 
 .title
 {
-	height: .60px;
-	font-size: 40px;
+	height: 60px;
+	font-size: 35px;
 	font-family: 'Pacifico', cursive;
 	color: #FF5252;
 	text-align: left;
-	/*background-color:#F6F6F6;*/
 	background-color: rgba(255, 255, 255, 0.7);
 	border-bottom: 1px solid rgba(189, 191, 181, 0.4);;
 }
