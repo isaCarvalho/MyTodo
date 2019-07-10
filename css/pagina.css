@@ -28,8 +28,8 @@ header
 
 .title
 {
-	height: 70px;
-	font-size: 50px;
+	height: 50px;
+	font-size: 30px;
 	font-family: 'Pacifico', cursive;
 	color: #FF5252;
 	text-align: left;
@@ -41,7 +41,7 @@ header
 .menu
 {
 	height: 20px;
-	font-size: 18px;
+	font-size: 14px;
 	text-align: right;
 	float: right;
 	margin-top: 0px;
