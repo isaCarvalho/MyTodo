@@ -16,6 +16,8 @@ function atualizar()
 
         if (($result['data'] <= date('Y-m-d')) && ($result['fim'] <= date('H:i:s')))
         {
+            var_dump(date($result['data'], strtotime('+'.$tempo[0]['intervalo'].' days')));
+
             if ($tempo[0]['intervalo'] != 0)
                 Query::update("tarefas", "data", "id_tarefa = ?", [date($result['data'], strtotime('+'.$tempo[0]['intervalo'].' days')), $result['id_tarefa']]);
             else
