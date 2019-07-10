@@ -1,25 +1,19 @@
 #MyTodo
 
-- HTML5, CSS3 e PHP 7.3.
+- HTML5
+- CSS3
+- PHP 7.3.
+- JS
+- Postrges 11.
 
 ###Descrição Geral
 
-MyTodo deve permitir que o usuário cadastre tarefas que já foram cumpridas, que ainda estão em andamento e que estão em estado de stuck. 
+MyTodo deve permitir que o usuário cadastre tarefas que possuam ou não recorrências. 
 
-As tarefas serão separadas por estado em que estiverem. 
+As tarefas serão ordenadas pelas suas datas e tarefas cumpridas não aparecem na tabela. 
 
-Uma tarefa deve ter os campos: identificador, nome, inicio, fim, data e em qual estado ela se encontra.
+Uma tarefa deve ter os campos: identificador, nome, inicio, fim, data e em sua recorrência.
 
-Duas tarefas podem ser realizadas ao mesmo tempo, e elas podem ou não ter um horário associado (inicio e fim). 
+Duas tarefas podem ser realizadas ao mesmo tempo, e elas devem ter um horário associado (inicio e fim) e uma data. 
 
 ** Deve ser verificado que o horário de fim não pode ser antes do horário de inicio de uma tarefa **
-
-###Tarefas de Exemplo:
-
-1. Aula de Piano, de 10h às 12h, 20/12/2013, feito;
-
-2. Entrega de documentos, 13h, 10/06/2019, em andamento;
-
-3. Projeto, 20/05/2020, stuck; 
-=========================================================
-
