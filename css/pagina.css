@@ -109,7 +109,8 @@ a div img
 
 form 
 {
-	margin-left: 450px;
+	/*margin-left: 450px;*/
+	margin: 0 auto;
 	height: 350px;
 	width: 400px; 
 	padding: 15px;
