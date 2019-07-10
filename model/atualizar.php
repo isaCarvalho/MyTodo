@@ -18,10 +18,8 @@ function atualizar()
         {
             if ($tempo[0]['intervalo'] != 0)
             {
-                $novaData = new Date($result['data']);
-                $novaData->add(DateInterval::createfromdatestring('+'.$tempo[0]['intervalo']).' days');
-
-                Query::update("tarefas", "data", "id_tarefa = ?", [$novaData->format('Y-m-d'), $result['id_tarefa']]);   
+                $novaData = date('Y-m-d', strtotime('+'.$tempo[0]['intervalo'].' days', strtotime($result['data'])));
+                Query::update("tarefas", "data", "id_tarefa = ?", [$novaData, $result['id_tarefa']]);   
             }
             else
                 Query::update("tarefas", "ativo", "id_tarefa = ?", [0, $result['id_tarefa']]);
