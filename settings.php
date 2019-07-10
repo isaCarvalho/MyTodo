@@ -54,7 +54,7 @@
 
 </body>
 
-<script src="js/limparForm.js">
+<script src="js/limparForm.js"></script>
 
 <?php
 	include "footer.html";
