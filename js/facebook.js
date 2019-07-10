@@ -77,7 +77,3 @@ function testAPI()
       .then(response => window.location = '/home.php')
   });
 }
-
-FB.logout(function(response) {
-  // user is now logged out
-});
