@@ -23,17 +23,17 @@
 
 				<p>
 					<label for="inicio">Inicio*</label>
-					<input type="time" id="incioid" name="inicio" class="inputtime"/>
+					<input type="time" id="incioid" name="inicio" class="inputtime" required="true"/>
 				</p>
 
 				<p>
 					<label for="fim">Término*</label>
-					<input type="time" id="fimid" name="fim" class="inputtime"/>
+					<input type="time" id="fimid" name="fim" class="inputtime" required="true"/>
 				</p>
 
 				<p>
 					<label for="data">Data*</label>
-					<input type="date" id="d*ataid" name="data" class="inputtime" />
+					<input type="date" id="dataid" name="data" class="inputtime" required="true"/>
 				</p>
 
 				<p id="recorrencia">
