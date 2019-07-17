@@ -13,7 +13,7 @@ function atualizarUsuario()
 	$nome = strtolower($nome);
 	$email = strtolower($email);
 	$cemail = strtolower($cemail);
-	
+
 	$results = Query::select("usuarios", "nome, email, senha", "id_usuario = ?", [$id_usuario]);
 	
 	if ($results[0]['nome'] != $nome)
@@ -41,7 +41,7 @@ function atualizarUsuario()
 	}
 	else
 	{
-		Query::update("usuarios", "senha", "id_usuario = ?", [$senha, $id_usuario]);
+		Query::update("usuarios", "senha", "id_usuario = ?", [md5($senha), $id_usuario]);
 	}
 	
 	return '../home.php';

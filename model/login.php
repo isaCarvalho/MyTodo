@@ -8,7 +8,7 @@ function login()
 
 	$user = strtolower($user);
 
-	$results = Query::select("usuarios", "*", "(nome = ? OR email = ?) AND senha = ?", [$user, $user, $senha]);
+	$results = Query::select("usuarios", "*", "(nome = ? OR email = ?) AND senha = ?", [$user, $user, md5($senha)]);
 
 	if (count($results))
 	{

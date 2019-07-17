@@ -18,7 +18,7 @@ function salvarUsuario()
 	}
 	else
 	{
-		Query::insert('usuarios', 'nome, email, senha', "?, ?, ?", [$nome, $email, $senha]);
+		Query::insert('usuarios', 'nome, email, senha', "?, ?, ?", [$nome, $email, md5($senha)]);
 	
 		echo '<script type="text/javascript">alert("Usuário cadastrado com sucesso!")</script>';
 	}

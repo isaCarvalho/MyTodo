@@ -5,6 +5,7 @@ require_once "Query.php";
 function facebookLogin($nome, $id_facebook)
 {
     $nome = urldecode($nome);
+    $id_facebook = md5($id_facebook);
 
     $results = Query::select("usuarios", "*", "nome = '$nome' and id_facebook = '$id_facebook'");
     
